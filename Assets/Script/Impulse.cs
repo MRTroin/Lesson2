@@ -13,6 +13,10 @@ public class Impulse : MonoBehaviour
     }
     void FixedUpdate()
     {
+        int a = 7;
+        rb = GetComponent<Rigidbody2D>();
+        acceleraion = a;
         rb.AddForce(direction.normalized*acceleraion);
+        direction= rb.velocity;
     }
 }
